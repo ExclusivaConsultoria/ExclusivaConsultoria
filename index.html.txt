@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exclusiva Consultoria | Contabilidade, Auditoria e Consultoria</title>
+
+    <meta name="description"
+          content="Exclusiva Consultoria, Auditoria e Eventos LTDA. Serviços de contabilidade, consultoria tributária, auditoria, gestão empresarial, tecnologia e treinamentos em Aracaju - Sergipe.">
+
+    <meta name="keywords"
+          content="contabilidade Aracaju, contador Aracaju, consultoria contábil, auditoria contábil, consultoria tributária, Exclusiva Consultoria, Sergipe">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --primary: #0b315b;
+            --primary-dark: #06223f;
+            --secondary: #c89b3c;
+            --secondary-light: #e7c873;
+            --light: #f6f8fb;
+            --dark: #142033;
+            --text: #5f6b7a;
+            --white: #ffffff;
+            --success: #198754;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(6, 34, 63, 0.97);
+            padding: 16px 0;
+            transition: .3s;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: .3px;
+        }
+
+        .navbar-brand span {
+            color: var(--secondary-light);
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,.85);
+            font-weight: 500;
+            margin-left: 18px;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-light);
+        }
+
+        .btn-gold {
+            background: var(--secondary);
+            color: #fff;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-gold:hover {
+            background: #b2872e;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 760px;
+            background:
+                linear-gradient(90deg,
+                rgba(5, 30, 56, .98) 0%,
+                rgba(7, 43, 78, .92) 50%,
+                rgba(7, 43, 78, .70) 100%),
+                url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 50%;
+            right: -180px;
+            top: 100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(200,155,60,.15);
+            border: 1px solid rgba(231,200,115,.4);
+            color: var(--secondary-light);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.08;
+            max-width: 850px;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero h1 span {
+            color: var(--secondary-light);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.82);
+            font-size: 19px;
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline-light-custom {
+            border: 1px solid rgba(255,255,255,.5);
+            color: #fff;
+            padding: 11px 23px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            margin-top: -65px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stat-box {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px 20px;
+            box-shadow: 0 15px 45px rgba(16, 39, 65, .12);
+            text-align: center;
+            height: 100%;
+        }
+
+        .stat-box i {
+            font-size: 30px;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .stat-box h3 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 30px;
+        }
+
+        .stat-box p {
+            margin: 3px 0 0;
+            font-size: 13px;
+            color: #778191;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: var(--secondary);
+            font-weight: 800;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            max-width: 700px;
+            color: #6c7785;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-section {
+            background: var(--light);
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 32px;
+            height: 100%;
+            border: 1px solid #edf0f4;
+            transition: .35s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 0;
+            background: var(--secondary);
+            transition: .35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(12, 39, 66, .10);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-icon {
+            width: 62px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(11,49,91,.08);
+            color: var(--primary);
+            border-radius: 13px;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-image {
+            min-height: 530px;
+            border-radius: 18px;
+            background:
+                linear-gradient(rgba(7,43,78,.25), rgba(7,43,78,.35)),
+                url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,.15);
+        }
+
+        .about-badge strong {
+            display: block;
+            color: var(--primary);
+            font-size: 28px;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            color: #536071;
+        }
+
+        .check-list i {
+            color: var(--success);
+            font-size: 20px;
+        }
+
+        /* =========================
+           HIGHLIGHT
+        ========================= */
+
+        .highlight {
+            background: var(--primary);
+            color: #fff;
+            padding: 75px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight h2 {
+            color: #fff;
+            font-size: 38px;
+        }
+
+        .highlight p {
+            color: rgba(255,255,255,.75);
+        }
+
+        .highlight-icon {
+            font-size: 80px;
+            color: rgba(255,255,255,.08);
+            position: absolute;
+            right: 8%;
+            top: 20px;
+        }
+
+        /* =========================
+           CNAE
+        ========================= */
+
+        .cnae-card {
+            border: 1px solid #e9edf2;
+            border-radius: 12px;
+            padding: 20px;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .cnae-card:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+        }
+
+        .cnae-code {
+            color: var(--secondary);
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .cnae-card h5 {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           COMPANY DATA
+        ========================= */
+
+        .data-section {
+            background: var(--light);
+        }
+
+        .data-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #edf0f3;
+            height: 100%;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 13px 0;
+            border-bottom: 1px solid #edf0f3;
+            font-size: 14px;
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-row span:first-child {
+            color: #7a8593;
+        }
+
+        .data-row strong {
+            text-align: right;
+            color: var(--dark);
+        }
+
+        .status {
+            color: var(--success) !important;
+        }
+
+        /* =========================
+           PARTNERS
+        ========================= */
+
+        .partner-card {
+            background: #fff;
+            border: 1px solid #edf0f3;
+            border-radius: 13px;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.07);
+        }
+
+        .partner-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background: rgba(11,49,91,.08);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+        }
+
+        .partner-card h6 {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .partner-card small {
+            color: var(--secondary);
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-section {
+            background:
+                linear-gradient(135deg, #06223f, #0b477d);
+        }
+
+        .contact-section h2 {
+            color: #fff;
+        }
+
+        .contact-section .section-label {
+            color: var(--secondary-light);
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 14px;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .contact-card i {
+            font-size: 28px;
+            color: var(--secondary-light);
+            margin-bottom: 12px;
+        }
+
+        .contact-card h5 {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: rgba(255,255,255,.72);
+            margin-bottom: 0;
+        }
+
+        .contact-card a:hover {
+            color: #fff;
+        }
+
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 18px;
+            color: var(--secondary-light) !important;
+            font-weight: 700;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #041a30;
+            color: rgba(255,255,255,.6);
+            padding: 35px 0;
+        }
+
+        footer strong {
+            color: #fff;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 50%;
+            color: #fff;
+            transition: .3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(37,211,102,.35);
+            transition: .3s;
+        }
+
+        .whatsapp-float:hover {
+            color: #fff;
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .navbar-nav {
+                padding-top: 15px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+
+            .hero {
+                min-height: 680px;
+            }
+
+            .stats {
+                margin-top: -30px;
+            }
+
+            .about-image {
+                min-height: 400px;
+                margin-bottom: 35px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+        }
+
+        @media (max-width: 575px) {
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .stat-box {
+                padding: 22px 12px;
+            }
+
+            .data-row {
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .data-row strong {
+                text-align: left;
+            }
+
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 26px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            Exclusiva <span>Consultoria</span>
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">A Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#atividades">Atividades</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a class="btn btn-gold" href="#contato">
+                        Fale Conosco
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="container hero-content">
+
+        <div class="row">
+
+            <div class="col-lg-9">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Empresa ativa desde 2001
+                </div>
+
+                <h1>
+                    Soluções inteligentes para
+                    <span>empresas que querem crescer.</span>
+                </h1>
+
+                <p>
+                    Contabilidade, auditoria, consultoria tributária,
+                    gestão empresarial, tecnologia e soluções estratégicas
+                    para transformar desafios em oportunidades.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#servicos" class="btn btn-gold btn-lg">
+                        Conheça nossos serviços
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#contato" class="btn-outline-light-custom">
+                        Entre em contato
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="container stats">
+
+    <div class="row g-3">
+
+        <div class="col-6 col-lg-3">
+            <div class="stat-box">
+                <i class="bi bi-calendar-check"></i>
+                <h3>25+</h3>
+                <p>Anos de experiência</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <div class="stat-box">
+                <i class="bi bi-briefcase"></i>
+                <h3>10</h3>
+                <p>Áreas de atuação</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <div class="stat-box">
+                <i class="bi bi-shield-check"></i>
+                <h3>100%</h3>
+                <p>Compromisso profissional</p>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <div class="stat-box">
+                <i class="bi bi-geo-alt"></i>
+                <h3>SE</h3>
+                <p>Atuação em Sergipe</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+
+<section class="services-section" id="servicos">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Nossas soluções
+            </div>
+
+            <h2 class="section-title">
+                Serviços para apoiar<br>
+                o crescimento da sua empresa
+            </h2>
+
+            <p class="section-description mx-auto">
+                Oferecemos uma atuação multidisciplinar para empresas
+                que buscam segurança, organização, eficiência e melhores
+                resultados.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Serviço 1 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Escrituração, demonstrações contábeis,
+                        obrigações acessórias e acompanhamento
+                        contábil para empresas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Serviço 2 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-bar-graph"></i>
+                    </div>
+
+                    <h4>Consultoria Tributária</h4>
+
+                    <p>
+                        Planejamento e orientação tributária para
+                        melhorar a eficiência fiscal e apoiar
+                        decisões empresariais.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Serviço 3 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+
+                    <h4>Auditoria Contábil</h4>
+
+                    <p>
+                        Análises, verificações e avaliações para
+                        proporcionar maior segurança e confiabilidade
+                        às informações financeiras.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Serviço 4 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Gestão Empresarial</h4>
+
+                    <p>
+                        Consultoria para processos, planejamento,
+                        organização e desenvolvimento da gestão
+                        empresarial.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Serviço 5 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+
+                    <h4>Tecnologia da Informação</h4>
+
+                    <p>
+                        Consultoria, suporte técnico, manutenção
+                        e soluções de tecnologia para empresas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Serviço 6 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+
+                    <h4>Treinamentos</h4>
+
+                    <p>
+                        Desenvolvimento profissional e gerencial
+                        por meio de treinamentos voltados às
+                        necessidades das organizações.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Serviço 7 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h4>Serviços de Engenharia</h4>
+
+                    <p>
+                        Atuação complementar em serviços de
+                        engenharia e suporte técnico especializado.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Serviço 8 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calendar-event"></i>
+                    </div>
+
+                    <h4>Eventos Corporativos</h4>
+
+                    <p>
+                        Organização de feiras, congressos,
+                        exposições e eventos para empresas
+                        e organizações.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Serviço 9 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+
+                    <h4>Pesquisas de Mercado</h4>
+
+                    <p>
+                        Pesquisas de mercado e opinião pública
+                        para apoiar estratégias e decisões
+                        empresariais.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section id="empresa">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="about-image">
+
+                    <div class="about-badge">
+                        <strong>25 anos</strong>
+                        <span>de experiência e atuação</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="section-label">
+                    Sobre a Exclusiva
+                </div>
+
+                <h2 class="section-title">
+                    Experiência para cuidar
+                    das decisões da sua empresa.
+                </h2>
+
+                <p>
+                    A <strong>Exclusiva Consultoria, Auditoria e Eventos LTDA</strong>
+                    atua desde 2001 oferecendo soluções profissionais
+                    nas áreas contábil, tributária, empresarial,
+                    tecnológica e gerencial.
+                </p>
+
+                <p>
+                    Com sede em Aracaju, Sergipe, nossa proposta é
+                    oferecer uma visão integrada das necessidades
+                    empresariais, contribuindo para organizações
+                    mais eficientes, organizadas e preparadas.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Atendimento profissional e personalizado</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Experiência desde 2001</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Atuação multidisciplinar</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Foco em segurança e eficiência</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DESTAQUE
+========================= -->
+
+<section class="highlight">
+
+    <i class="bi bi-bar-chart-line highlight-icon"></i>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <div class="section-label">
+                    Nossa proposta
+                </div>
+
+                <h2>
+                    Mais do que números:
+                    estratégia para o seu negócio.
+                </h2>
+
+                <p class="mt-3 mb-0">
+                    Informação contábil, visão empresarial e
+                    soluções estratégicas para apoiar decisões
+                    mais seguras e eficientes.
+                </p>
+
+            </div>
+
+            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                <a href="#contato" class="btn btn-gold btn-lg">
+                    Fale com nossa equipe
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ATIVIDADES / CNAES
+========================= -->
+
+<section id="atividades">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Áreas de atuação
+            </div>
+
+            <h2 class="section-title">
+                Nossas atividades
+            </h2>
+
+            <p class="section-description mx-auto">
+                A empresa possui atuação registrada em diferentes
+                segmentos profissionais, permitindo uma abordagem
+                ampla para as necessidades de seus clientes.
+            </p>
+
+        </div>
+
+        <div class="row g-3">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">69.20-6-02 • PRINCIPAL</div>
+                    <h5>
+                        Atividades de consultoria e auditoria
+                        contábil e tributária
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">71.12-0-00</div>
+                    <h5>Serviços de engenharia</h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">85.99-6-04</div>
+                    <h5>
+                        Treinamento em desenvolvimento
+                        profissional e gerencial
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">62.04-0-00</div>
+                    <h5>
+                        Consultoria em tecnologia
+                        da informação
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">70.20-4-00</div>
+                    <h5>
+                        Consultoria em gestão empresarial,
+                        exceto consultoria técnica específica
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">69.20-6-01</div>
+                    <h5>Atividades de contabilidade</h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">62.09-1-00</div>
+                    <h5>
+                        Suporte técnico, manutenção e outros
+                        serviços em tecnologia da informação
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">82.30-0-01</div>
+                    <h5>
+                        Serviços de organização de feiras,
+                        congressos, exposições e festas
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="cnae-card">
+                    <div class="cnae-code">73.20-3-00</div>
+                    <h5>
+                        Pesquisas de mercado e de
+                        opinião pública
+                    </h5>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DADOS DA EMPRESA
+========================= -->
+
+<section class="data-section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="section-label">
+                    Informações cadastrais
+                </div>
+
+                <h2 class="section-title">
+                    Dados da empresa
+                </h2>
+
+                <p>
+                    Informações institucionais e cadastrais
+                    da Exclusiva Consultoria.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-row">
+                        <span>CNPJ</span>
+                        <strong>04.721.588/0001-23</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Razão Social</span>
+                        <strong>
+                            Exclusiva Consultoria, Auditoria e Eventos LTDA
+                        </strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Nome Fantasia</span>
+                        <strong>Exclusiva Consultoria</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Fundação</span>
+                        <strong>06/04/2001</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Porte</span>
+                        <strong>Micro Empresa</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Natureza Jurídica</span>
+                        <strong>Sociedade Empresária Limitada</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Regime Tributário</span>
+                        <strong>Simples Nacional</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Capital Social</span>
+                        <strong>R$ 120.000,00</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>CRC</span>
+                        <strong>SE-000698/O</strong>
+                    </div>
+
+                    <div class="data-row">
+                        <span>Situação</span>
+                        <strong class="status">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Ativa
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SÓCIOS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Estrutura societária
+            </div>
+
+            <h2 class="section-title">
+                Sócios e administradores
+            </h2>
+
+        </div>
+
+        <div class="row g-3">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <div>
+                        <h6>Adriano Vieira da Silva dos Santos</h6>
+                        <small>Sócio</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person-badge"></i>
+                    </div>
+
+                    <div>
+                        <h6>Fernanda Gabriella Santos Vitorio</h6>
+                        <small>Sócio-Administrador</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <div>
+                        <h6>Jiceno Antonio Menezes Lopes</h6>
+                        <small>Sócio</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <div>
+                        <h6>Joana D Arc dos Santos</h6>
+                        <small>Sócio</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <div>
+                        <h6>Maria Geilza Pinheiro Araujo</h6>
+                        <small>Sócio</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section class="contact-section" id="contato">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Fale conosco
+            </div>
+
+            <h2 class="section-title">
+                Vamos conversar sobre sua empresa?
+            </h2>
+
+            <p class="text-white-50 mx-auto" style="max-width:650px;">
+                Entre em contato com a Exclusiva Consultoria
+                e conheça nossas soluções para empresas.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- E-mail -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="contact-card">
+
+                    <i class="bi bi-envelope"></i>
+
+                    <h5>E-mail</h5>
+
+                    <a href="mailto:musajflavioml@gmail.com">
+                        musajflavioml@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Telefone -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="contact-card">
+
+                    <i class="bi bi-telephone"></i>
+
+                    <h5>Telefone</h5>
+
+                    <p>
+                        <a href="tel:+557932143062">
+                            (79) 3214-3062
+                        </a>
+                        <br>
+
+                        <a href="tel:+557930215500">
+                            (79) 3021-5500
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="contact-card">
+
+                    <i class="bi bi-whatsapp"></i>
+
+                    <h5>WhatsApp</h5>
+
+                    <a href="https://wa.me/5579998740952"
+                       target="_blank">
+                        (79) 99874-0952
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Endereço -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="contact-card">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <h5>Endereço</h5>
+
+                    <p>
+                        Rua Germiniano Maia, 691<br>
+                        Salgado Filho<br>
+                        Aracaju - SE<br>
+                        CEP 49020-040
+                    </p>
+
+                    <a class="map-link"
+                       href="https://www.google.com/maps/search/?api=1&query=Rua+Germiniano+Maia+691+Salgado+Filho+Aracaju+SE+49020-040"
+                       target="_blank">
+
+                        Ver no Google Maps
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-7">
+
+                <strong>Exclusiva Consultoria</strong>
+
+                <p class="mb-0 mt-1">
+                    Exclusiva Consultoria, Auditoria e Eventos LTDA
+                    <br>
+                    CNPJ: 04.721.588/0001-23
+                </p>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="d-flex justify-content-lg-end">
+
+                    <div class="footer-social">
+
+                        <a href="mailto:musajflavioml@gmail.com"
+                           title="Enviar e-mail">
+
+                            <i class="bi bi-envelope"></i>
+
+                        </a>
+
+                        <a href="https://wa.me/5579998740952"
+                           target="_blank"
+                           title="WhatsApp">
+
+                            <i class="bi bi-whatsapp"></i>
+
+                        </a>
+
+                        <a href="tel:+557932143062"
+                           title="Ligar">
+
+                            <i class="bi bi-telephone"></i>
+
+                        </a>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Germiniano+Maia+691+Salgado+Filho+Aracaju+SE+49020-040"
+                           target="_blank"
+                           title="Localização">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary opacity-25 my-4">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+
+            <small>
+                © 2026 Exclusiva Consultoria. Todos os direitos reservados.
+            </small>
+
+            <small>
+                CRC: SE-000698/O
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP FLUTUANTE
+========================= -->
+
+<a href="https://wa.me/5579998740952"
+   class="whatsapp-float"
+   target="_blank"
+   title="Fale conosco pelo WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
